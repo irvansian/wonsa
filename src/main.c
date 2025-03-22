@@ -13,7 +13,9 @@ int main(int argc, char **argv) {
         return -1;
     }
 
-    match_cmd(argv[1]);
+    char *sh_cmd = match_cmd(argv[1]);
+    printf("sh_cmd: %s", sh_cmd);
+    free_cmd(sh_cmd);
 
     return 0;
 }

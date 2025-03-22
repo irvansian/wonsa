@@ -28,14 +28,15 @@ char *match_cmd(const char *input_cmd) {
     fclose(file);
 
     trim_space(sh_cmd);
-    printf("sh_cmd is [%s]", sh_cmd);
 
     if (sh_cmd == NULL) {
         perror("Shell command not found");
         return NULL;
     }
 
-    return sh_cmd;
+    char *buf = (char *) malloc(sizeof(char) * (strlen(sh_cmd) + 1));
+    strcpy(buf, sh_cmd);
+    return buf;
 }
 
 void free_cmd(char *str) {

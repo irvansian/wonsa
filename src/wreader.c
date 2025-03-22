@@ -42,7 +42,3 @@ char *match_cmd(const char *input_cmd) {
 void free_cmd(char *str) {
     free(str);
 }
-
-void trim_str(char *str) {
-
-}

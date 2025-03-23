@@ -13,7 +13,7 @@ char *match_cmd(const char *input_cmd) {
     }
 
     char line_buf[64];
-    char *sh_cmd;
+    char *sh_cmd = NULL;
 
     while (fgets(line_buf, sizeof(line_buf), file)) {
         char *line_cmd = strtok(line_buf, ":");

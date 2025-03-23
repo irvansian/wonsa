@@ -4,6 +4,10 @@
 #include "cmd_sanitizer.h"
 
 void trim_space(char *str) {
+    if (str == NULL) {
+        return;
+    }
+    
     char *start = str;
     char *end;
 

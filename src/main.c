@@ -15,6 +15,10 @@ int main(int argc, char **argv) {
     }
 
     char *sh_cmd = match_cmd(argv[1]);
+    if (sh_cmd == NULL) {
+        return 1;
+    }
+    
     exec_cmd(sh_cmd);
     free_cmd(sh_cmd);
 

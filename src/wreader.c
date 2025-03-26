@@ -26,7 +26,6 @@ char *match_cmd(const char *input_cmd) {
     }
     
     fclose(file);
-
     trim_space(sh_cmd);
 
     if (sh_cmd == NULL) {

@@ -7,7 +7,7 @@ void trim_space(char *str) {
     if (str == NULL) {
         return;
     }
-    
+
     char *start = str;
     char *end;
 
@@ -20,7 +20,7 @@ void trim_space(char *str) {
         return;
     }
 
-    end = start + strlen(start) - 1; // ptr arithmetic
+    end = start + strlen(start) - 1;
     while (end > start && isspace((unsigned char) *end)) {
         end--;
     }
